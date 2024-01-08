@@ -11,26 +11,42 @@
 <body>
     <div class="side-nav">
         <div class="menu">
-            <img src="IMG/Menu.svg" class="side-menu">
+            <div>
+                <img src="IMG/Menu.svg" class="side-menu">
+                <span>Menu</span>
+            </div>
             <hr>
         </div>
         <ul>
-            <li><img src="IMG/Home_light.svg">
-                <p>Home</p>
+            <li>
+                <div>
+                    <img src="IMG/Home_light.svg">
+                    <span>Home</span>
+                </div>
             </li>
-            <li><img src="IMG/User_light.svg">
-                <p>User</p>
+            <li>
+                <div>
+                    <img src="IMG/User_light.svg">
+                    <span>User</span>
+                </div>
             </li>
-            <li><img src="IMG/Pizza.svg">
-                <p>Manu</p>
+            <li>
+                <div>
+                    <img src="IMG/Pizza.svg">
+                    <span>Menu</span>
+                </div>
             </li>
-            <li><img src="IMG/Chart_light.svg">
-                <p>Chart</p>
+            <li>
+                <div>
+                    <img src="IMG/Chart_light.svg">
+                    <span>Chart</span>
+                </div>
             </li>
         </ul>
         <ul class="logoutBtn">
-            <li><img src="IMG/Sign_out_squre.svg" class="Sign-out">
-                <p>Sign Out</p>
+            <li>
+                <img src="IMG/Sign_out_squre.svg" class="Sign-out">
+                <span>Logout</span>
             </li>
         </ul>
     </div>
@@ -64,7 +80,27 @@
 </div>
 <div class="box3">
     <div class="contenner-1">
-        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>Lastname</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody id="lastestRegister">
+                <tr>
+                    <td>0</td>
+                    <td>test</td>
+                    <td>ty</td>
+                    <td>0129123</td>
+                    <td>New york</td>
+                    <td>2024</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="contenner-2">
 
@@ -73,6 +109,9 @@
         
     </div>
 </div>
+
+<script src="script.js"></script>
+
 </body>
 
 </html>

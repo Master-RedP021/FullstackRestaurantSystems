@@ -9,7 +9,6 @@
 .side-nav{
     margin-left: 11px;
     margin-top: 9px;
-    width: 85px;
     height: 900px;
     position: fixed;
     top: 0;
@@ -19,7 +18,7 @@
     display: grid;
     align-items: start;
     gap: 15px;
-    transition: width 0.5s;
+    transition: .5s;
     border-radius: 10px;
 }
 .side-menu{
@@ -30,10 +29,6 @@
     display: grid;
     align-items: center;
     width: 60px;
-    margin-left: auto ;
-    margin-right: auto;
-    overflow: hidden;
-    justify-content: flex-start;
     height: 100px;
     transition: .5s;
     border-radius: 8px;
@@ -41,15 +36,55 @@
 }
 
 .side-nav:hover {
-    justify-content: start;
-    width: 150px;
-    div {
-        width: 150px;
+    > div {
+        width: 160px;
+    }
+
+    ul:not(.logoutBtn) li {
+        > div {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+            > span {
+                margin-left: 1.2rem;
+                opacity: 1;
+            }
+        }
+    }
+
+    .logoutBtn {
+        li {
+            width: 100%;
+            justify-items: start;
+            > span {
+                opacity: 1;
+                color: #fff;
+                width: 100px;
+                margin-left: 1.2rem;
+            }
+        }
+    }
+}
+
+.menu {
+    > div {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        color: #fff;
+        justify-content: start !important;
+    }
+    span {
+        opacity: 0;
+        transition: .25s;
     }
 }
 
 .side-nav:hover .menu {
-    justify-content: start !important;
+    span {
+        opacity: 1;
+    }
 }
 
 ul{
@@ -70,39 +105,48 @@ ul li p {
     display: none;
 }
 
+ul li {
+    > div {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        overflow: hidden;
+        > span {
+            margin-left: 0;
+            width: 0;
+            opacity: 0;
+            transition: .25s;
+        }
+    }
+}
+
 .logoutBtn {
     display: flex;
     align-items: end;
     align-self: end;
+    list-style: none;
     > li {
+        transition: .25s;
+        background-color: #F00;
+        border-radius: 5px;
         margin: unset;
+        height: fit-content;
+        display: flex;
+        justify-items: start;
+        align-content: center;
+        padding: .25rem;
+        width: 100%;
+        > img {
+            transform: scale(.8);
+        }
+        > span {
+            overflow: hidden;
+            opacity: 0;
+            width: 0;
+            transition: .25s;
+        }
     }
 }
-
-.Sign-out{
-background-color: red;
-border-radius: 7px;
-}
-
-/* .side-nav:hover{
-    width: 155px;
- } */
-/* .side-nav:hover ul li p {
-    display: block;
-    font-size: 18px;
-    
-}
-.side-nav:hover ul li img {
-    margin-right: 10px;
-    
-} 
- .side-nav:hover ul li {
-    
-    justify-content: flex-start;
-}
-.side-menu:hover{
-    background-color: red; */
-/* }   */
 
 .nav-1{
     background-color: #0097E0;
@@ -120,7 +164,6 @@ border-radius: 7px;
 }
 
 .box{
-   /* border:1px solid green; */
    margin-top: 20px;
    margin-left: 135px;
    display: flex;
@@ -228,7 +271,6 @@ border-radius: 7px;
 
 
 .box3{
- border: 1px solid #00C000;
  display: flex;
 }
 .contenner-1{
@@ -254,4 +296,42 @@ border-radius: 7px;
     height: 465px;
     border-radius: 2%;
 box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .50);
+}
+
+table.table{
+    width: 100%;
+    display: grid;
+    border-collapse: collapse;
+    grid-template-areas: 'thead' 'thead' 'thead'
+                        'tbody' 'tbody' 'tbody'
+                        'tbody' 'tbody' 'tbody';
+    padding: 1rem;
+    thead {
+        grid-area: 'thead';
+        border-bottom: 1px solid;
+        > tr {
+            display: flex;
+            justify-content: space-between;
+            > th {
+                font-weight: 400;
+                font-size: .7em;
+            }
+        }
+    }
+    tbody {
+        margin-top: .3rem;
+        grid-area: 'tbody';
+        > tr {
+            border-bottom: 1px solid #00000033;
+            display: flex;
+            justify-content: space-between;
+                > td {
+                    font-weight: 400;
+                    font-size: .5em;
+                }
+            &:nth-child(even) {
+                background-color: #00000022;
+            }
+        }
+    }
 }
