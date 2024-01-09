@@ -25,10 +25,6 @@ try {
 
     $query1 = mysqli_query($con, $sql);
     if ($query1) {
-        // $data = array(
-        //     "code" => 201,
-        //     "msg" => 'Add order success'
-        // );
         $orderId = mysqli_fetch_assoc(mysqli_query($con, "SELECT order_id from orderr order by desc"));
         $sql = "INSERT INTO order_detail ()";
     } else {
